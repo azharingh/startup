@@ -1,4 +1,4 @@
-def indivual_serial(item) -> dict:
+def individual_serial(item) -> dict:
     return {
         "id": str(item["_id"]),
         "name": item["name"],
@@ -10,4 +10,4 @@ def indivual_serial(item) -> dict:
     }
 
 def list_serial(items) -> list:
-    return [indivual_serial(item) for item in items]
+    return [individual_serial(item) for item in items]
