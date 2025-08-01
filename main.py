@@ -70,7 +70,7 @@ def signup(user: User) -> UserOut:
 
 @app.post("/login")
 def login(form_data: OAuth2PasswordRequestForm = Depends()) -> Token :
-    db_user = user_collection.find_one({"username": form_data.username})
+    db_user = user_collection.find_one({"email": form_data.username})
 
 
     if not db_user or not verify_password(form_data.password, db_user["password"]):
